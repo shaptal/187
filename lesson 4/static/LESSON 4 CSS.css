@@ -1,0 +1,64 @@
+:root{
+    --grey: #292929; 
+    --light_grey: #616161;
+    --white: #FFFFFF;
+}
+
+*{ /*universal selector*/
+    font-family: handwritten, Helvetica, sans-serif;
+    padding: 1vw;
+    margin: 1vw;
+    border: 1px solid black;
+}
+
+body{
+    background-color: var(--grey);
+}
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@font-face {
+    font-family: handwritten;
+    src: url(../static/FONTS/Kolker_Brush/KolkerBrush-Regular.ttf);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+
+   
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'menu menu menu'
+    'center center center';
+
+}
+
+.item1 {
+    grid-area: header;
+    background-color: var(--grey); 
+    color: var(--white);
+    height: 20vh;
+}
+.item2 {
+    grid-area: menu;
+    background-color: white;
+    height: 40vh;
+}
+
+.item3 {
+    grid-area: center;
+    background-color: var(--light_grey);
+    height: 40vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'header'
+        'menu'
+        'center';
+    
+    }
+    
+}
